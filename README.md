@@ -2,7 +2,7 @@
 
 You have a list of URLs and want to check, do they have RSS links embedded? Look no further.
 
-## Installation
+## Installation and usage
 
 1. have Elixir installed.
 2. clone repo
