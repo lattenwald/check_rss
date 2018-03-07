@@ -1,21 +1,27 @@
 # CheckRss
 
-**TODO: Add description**
+You have a list of URLs and want to check, do they have RSS links embedded? Look no further.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `check_rss` to your list of dependencies in `mix.exs`:
+1. have Elixir installed.
+2. clone repo
+3. `mix escript.build`
+4. `./check_rss.ex --help`
 
-```elixir
-def deps do
-  [
-    {:check_rss, "~> 0.1.0"}
-  ]
-end
-```
+        Usage: `check_rss.ex --help`
+               `check_rss.ex --url https://your.site
+               `check_rss.ex [options] file_with_urls
+         
+        Available options:
+         
+          * --help  -h  -- Show help
+          * --url   -u  -- Check single URL
+          * --concurrency int  -c int  -- concurrently running sites checks
+         
+        Check URLs from file for advertised RSS feeds. File should contain one URL per line
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/check_rss](https://hexdocs.pm/check_rss).
+Prints results to STDOUT; all separators are `<tab>`, not spaces
 
+        <url> ok  <tab-separated list of found RSS links>
+        <url> error <inspect of error>
